@@ -24,6 +24,16 @@ namespace SalesWebMvc.Controllers
             return View();
         }
 
+        public IActionResult Department()
+        {
+            return View();
+        }
+        
+        public IActionResult Sellers()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
