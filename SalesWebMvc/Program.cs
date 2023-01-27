@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using Pomelo.EntityFrameworkCore.MySql.Storage.Internal;
 using SalesWebMvc.Data;
 
 namespace SalesWebMvc
@@ -13,9 +12,13 @@ namespace SalesWebMvc
                 options.UseMySql(builder.Configuration.GetConnectionString("SalesWebMvcContext"), ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("SalesWebMvcContext")), builder =>
                     builder.MigrationsAssembly("SalesWebMvc")));
 
+            builder.Services.AddScoped<SeedingService>();
+
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
+
+            app.Services.CreateScope().ServiceProvider.GetRequiredService<SeedingService>().Seed();
 
             if (!app.Environment.IsDevelopment())
             {
