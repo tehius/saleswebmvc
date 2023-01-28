@@ -22,9 +22,17 @@ body {
 }
 
 .navbar-brand {
-    color: darkgrey;
+    color: white;
 }
 
 .navbar-brand:hover {
-    color: grey;
+    color: lightgray;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: lightgray;
 }
