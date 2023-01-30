@@ -35,7 +35,7 @@ public class SeedingService
         Seller s5 = new(5, "Giulianno Moço", "giulianno@gmail.com", new DateTime(1989, 1, 20), 4000.0, d3);
         Seller s6 = new(6, "João Santiago", "joao@gmail.com", new DateTime(2000, 8, 28), 3000.0, d2);
 
-        SalesRecord r1 = new(1, new DateTime(2022, 9, 25), 11000.0, SaleStatus.Billed, s1);
+        SalesRecord r1 = new(1, new DateTime(2022, 09, 25), 11000.0, SaleStatus.Billed, s1);
         SalesRecord r2 = new(2, new DateTime(2022, 09, 4), 7000.0, SaleStatus.Billed, s5);
         SalesRecord r3 = new(3, new DateTime(2022, 09, 13), 4000.0, SaleStatus.Canceled, s4);
         SalesRecord r4 = new(4, new DateTime(2022, 09, 1), 8000.0, SaleStatus.Billed, s1);
